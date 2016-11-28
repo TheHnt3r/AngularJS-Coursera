@@ -17,6 +17,7 @@ function lunchController($scope) {
       var splitted= $scope.value.split(",")
       splitted= splitted.filter(Boolean)
       //console.log(splitted);
+      $scope.lunchOutput="";
       switch (true) {
         case (splitted.length > 3):
           $scope.lunchOutput= "Too Much!";
@@ -26,7 +27,7 @@ function lunchController($scope) {
           break;
         default:
           if (splitted.length == 0) {
-            $scope.lunchOutput= "You've Got to Enter Something";
+            $scope.lunchOutput= "You've Got to Enter Something!";
             break;
           }
       }
